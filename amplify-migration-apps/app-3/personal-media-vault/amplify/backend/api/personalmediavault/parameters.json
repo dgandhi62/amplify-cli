@@ -1,0 +1,12 @@
+{
+  "AppSyncApiName": "personalmediavault",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "AuthCognitoUserPoolId": {
+    "Fn::GetAtt": [
+      "authpersonalmediavaultf4856ae1",
+      "Outputs.UserPoolId"
+    ]
+  },
+  "AuthModeLastUpdated": "2025-11-20T16:37:26.883Z"
+}

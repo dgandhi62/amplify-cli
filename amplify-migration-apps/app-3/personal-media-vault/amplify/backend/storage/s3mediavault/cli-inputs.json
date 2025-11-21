@@ -1,0 +1,16 @@
+{
+  "resourceName": "s3mediavault",
+  "policyUUID": "53b99f15",
+  "bucketName": "personalmediavault11c2ac8483044482a265c5b8fdbcd",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "READ"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "triggerFunction": "thumbnailgen",
+  "groupAccess": {}
+}
