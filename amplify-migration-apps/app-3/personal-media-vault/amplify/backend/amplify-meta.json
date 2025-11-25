@@ -1,0 +1,180 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-personalmediavault-dev-05fd8-authRole",
+      "UnauthRoleArn": "arn:aws:iam::615368094448:role/amplify-personalmediavault-dev-05fd8-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::615368094448:role/amplify-personalmediavault-dev-05fd8-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-personalmediavault-dev-05fd8-deployment",
+      "UnauthRoleName": "amplify-personalmediavault-dev-05fd8-unauthRole",
+      "StackName": "amplify-personalmediavault-dev-05fd8",
+      "StackId": "arn:aws:cloudformation:us-east-1:615368094448:stack/amplify-personalmediavault-dev-05fd8/0f08d040-c629-11f0-8f22-0afff0465d3d",
+      "AmplifyAppId": "d2q0s500uwnike"
+    }
+  },
+  "api": {
+    "personalmediavault": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "personalmediavaultf4856ae1"
+        }
+      ],
+      "output": {
+        "authConfig": {
+          "additionalAuthenticationProviders": [
+            {
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2026-02-28T16:37:26.345Z",
+                "apiKeyExpirationDays": 100,
+                "description": "testing"
+              },
+              "authenticationType": "API_KEY"
+            }
+          ],
+          "defaultAuthentication": {
+            "authenticationType": "AMAZON_COGNITO_USER_POOLS",
+            "userPoolConfig": {
+              "userPoolId": "authpersonalmediavaultf4856ae1"
+            }
+          }
+        },
+        "GraphQLAPIIdOutput": "g42gnng5jjalnlmjzazo6o7bxe",
+        "GraphQLAPIEndpointOutput": "https://gprwwpqe3fcpnadyhuofw5ef4u.appsync-api.us-east-1.amazonaws.com/graphql",
+        "GraphQLAPIKeyOutput": "da2-d6mc5rv6vjhc3blweijgua24dm"
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync",
+      "lastPushTimeStamp": "2025-11-25T19:50:21.739Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-personalmediavault-dev-05fd8-deployment/amplify-cfn-templates/api/cloudformation-template.json",
+        "logicalId": "apipersonalmediavault"
+      }
+    }
+  },
+  "auth": {
+    "personalmediavaultf4856ae1": {
+      "customAuth": false,
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [
+          "EMAIL"
+        ],
+        "socialProviders": [
+          "FACEBOOK",
+          "GOOGLE"
+        ],
+        "usernameAttributes": [
+          "EMAIL",
+          "PHONE_NUMBER"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "output": {
+        "UserPoolId": "us-east-1_xILGOppcO",
+        "AppClientIDWeb": "te53df68d2c6l10knpe0q5q27",
+        "AppClientID": "tgrh5anvsj49fd6dkoprh7mhh",
+        "HostedUIDomain": "personalmediavaultf4856ae1-f4856ae1-dev",
+        "IdentityPoolId": "us-east-1:3b8969df-b5d6-41a0-b26d-806a63ab7fae",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:615368094448:userpool/us-east-1_xILGOppcO",
+        "IdentityPoolName": "personalmediavaultf4856ae1_identitypool_f4856ae1__dev",
+        "OAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"http://localhost:3000/dashboard\"],\"LogoutURLs\":[\"http://localhost:3000/\"]}",
+        "UserPoolName": "personalmediavaultf4856ae1_userpool_f4856ae1"
+      },
+      "lastPushTimeStamp": "2025-11-25T19:50:21.742Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-personalmediavault-dev-05fd8-deployment/amplify-cfn-templates/auth/personalmediavaultf4856ae1-cloudformation-template.json",
+        "logicalId": "authpersonalmediavaultf4856ae1"
+      }
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "personalmediavaultf4856ae1",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups",
+      "output": {
+        "BasicGroupRole": "arn:aws:iam::615368094448:role/us-east-1_xILGOppcO-BasicGroupRole",
+        "AdminGroupRole": "arn:aws:iam::615368094448:role/us-east-1_xILGOppcO-AdminGroupRole"
+      },
+      "lastPushTimeStamp": "2025-11-25T19:50:23.136Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-personalmediavault-dev-05fd8-deployment/amplify-cfn-templates/auth/userPoolGroups-cloudformation-template.json",
+        "logicalId": "authuserPoolGroups"
+      }
+    }
+  },
+  "function": {
+    "thumbnailgen": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::615368094448:role/personalmediavaultLambdaRole62884e2e-dev",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:615368094448:function:thumbnailgen-dev",
+        "Name": "thumbnailgen-dev",
+        "LambdaExecutionRole": "personalmediavaultLambdaRole62884e2e-dev"
+      },
+      "lastPushTimeStamp": "2025-11-25T19:50:21.745Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-personalmediavault-dev-05fd8-deployment/amplify-cfn-templates/function/thumbnailgen-cloudformation-template.json",
+        "logicalId": "functionthumbnailgen"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-personalmediavault-dev-05fd8-deployment",
+        "s3Key": "amplify-builds/thumbnailgen-7059656c59754b4a3145-build.zip"
+      }
+    }
+  },
+  "storage": {
+    "s3mediavault": {
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "thumbnailgen",
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ]
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "S3",
+      "output": {
+        "BucketName": "personalmediavault11c2ac8483044482a265c5b8fdbcd05fd8-dev",
+        "Region": "us-east-1"
+      },
+      "lastPushTimeStamp": "2025-11-25T19:50:23.251Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-personalmediavault-dev-05fd8-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages3mediavault"
+      }
+    }
+  }
+}

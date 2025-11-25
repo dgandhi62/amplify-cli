@@ -25,7 +25,7 @@
       "function": {
         "thumbnailgen": {
           "deploymentBucketName": "amplify-personalmediavault-dev-05fd8-deployment",
-          "s3Key": "amplify-builds/thumbnailgen-6a3557556b385a754359-build.zip"
+          "s3Key": "amplify-builds/thumbnailgen-7059656c59754b4a3145-build.zip"
         }
       }
     }
