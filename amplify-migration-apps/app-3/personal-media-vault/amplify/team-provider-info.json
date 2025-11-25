@@ -13,12 +13,13 @@
     },
     "categories": {
       "auth": {
-        "personalmediavault84489a6d": {}
+        "personalmediavault84489a6d": {},
+        "userPoolGroups": {}
       },
       "function": {
         "thumbnailgen": {
           "deploymentBucketName": "amplify-personalmediavault-dev-067b6-deployment",
-          "s3Key": "amplify-builds/thumbnailgen-4d51722f52797445534e-build.zip"
+          "s3Key": "amplify-builds/thumbnailgen-44316651664b4a385567-build.zip"
         }
       },
       "api": {
@@ -26,6 +27,12 @@
       },
       "storage": {
         "s3mediavault": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d12nkc146kksf",
+          "type": "manual"
+        }
       }
     }
   }
