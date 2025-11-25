@@ -1,7 +1,5 @@
 {
-  "providers": [
-    "awscloudformation"
-  ],
+  "whyContinueWithGen1": "Prefer not to answer",
   "projectName": "personalmediavault",
   "version": "3.1",
   "frontend": "javascript",
@@ -13,5 +11,8 @@
       "BuildCommand": "npm run-script build",
       "StartCommand": "npm run-script start"
     }
-  }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
 }

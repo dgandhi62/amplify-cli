@@ -7,7 +7,7 @@
             "UserPoolId"
           ],
           "category": "auth",
-          "resourceName": "personalmediavaultf4856ae1"
+          "resourceName": "personalmediavault84489a6d"
         }
       ],
       "output": {
@@ -15,9 +15,9 @@
           "additionalAuthenticationProviders": [
             {
               "apiKeyConfig": {
-                "apiKeyExpirationDate": "2026-02-28T16:37:26.345Z",
+                "apiKeyExpirationDate": "2026-03-05T20:12:07.544Z",
                 "apiKeyExpirationDays": 100,
-                "description": "testing"
+                "description": "test key"
               },
               "authenticationType": "API_KEY"
             }
@@ -25,7 +25,7 @@
           "defaultAuthentication": {
             "authenticationType": "AMAZON_COGNITO_USER_POOLS",
             "userPoolConfig": {
-              "userPoolId": "authpersonalmediavaultf4856ae1"
+              "userPoolId": "authpersonalmediavault84489a6d"
             }
           }
         }
@@ -35,7 +35,7 @@
     }
   },
   "auth": {
-    "personalmediavaultf4856ae1": {
+    "personalmediavault84489a6d": {
       "customAuth": false,
       "dependsOn": [],
       "frontendAuthConfig": {
@@ -64,22 +64,6 @@
       },
       "providerPlugin": "awscloudformation",
       "service": "Cognito"
-    },
-    "userPoolGroups": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "UserPoolId",
-            "AppClientIDWeb",
-            "AppClientID",
-            "IdentityPoolId"
-          ],
-          "category": "auth",
-          "resourceName": "personalmediavaultf4856ae1"
-        }
-      ],
-      "providerPlugin": "awscloudformation",
-      "service": "Cognito-UserPool-Groups"
     }
   },
   "function": {
@@ -109,17 +93,7 @@
   },
   "storage": {
     "s3mediavault": {
-      "dependsOn": [
-        {
-          "attributes": [
-            "Name",
-            "Arn",
-            "LambdaExecutionRole"
-          ],
-          "category": "function",
-          "resourceName": "thumbnailgen"
-        }
-      ],
+      "dependsOn": [],
       "providerPlugin": "awscloudformation",
       "service": "S3"
     }

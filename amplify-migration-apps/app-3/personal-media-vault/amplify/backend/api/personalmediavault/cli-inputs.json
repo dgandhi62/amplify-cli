@@ -5,15 +5,14 @@
     "serviceName": "AppSync",
     "defaultAuthType": {
       "mode": "AMAZON_COGNITO_USER_POOLS",
-      "cognitoUserPoolId": "authpersonalmediavaultf4856ae1"
+      "cognitoUserPoolId": "authpersonalmediavault84489a6d"
     },
-    "conflictResolution": {},
     "additionalAuthTypes": [
       {
         "mode": "API_KEY",
         "expirationTime": 100,
-        "apiKeyExpirationDate": "2026-02-28T16:37:26.345Z",
-        "keyDescription": "testing"
+        "apiKeyExpirationDate": "2026-03-05T20:12:07.544Z",
+        "keyDescription": "test key"
       }
     ]
   }

@@ -1,7 +1,7 @@
 {
   "resourceName": "s3mediavault",
-  "policyUUID": "53b99f15",
-  "bucketName": "personalmediavault11c2ac8483044482a265c5b8fdbcd",
+  "policyUUID": "07ed6a8b",
+  "bucketName": "personalmediavaultd77835a55cd741b1946cfff581bda",
   "storageAccess": "authAndGuest",
   "guestAccess": [
     "READ"
@@ -11,6 +11,6 @@
     "READ",
     "DELETE"
   ],
-  "triggerFunction": "thumbnailgen",
+  "triggerFunction": "NONE",
   "groupAccess": {}
 }

@@ -7,7 +7,7 @@ export type AmplifyDependentResourcesAttributes = {
     };
   };
   auth: {
-    personalmediavaultf4856ae1: {
+    personalmediavault84489a6d: {
       AppClientID: 'string';
       AppClientIDWeb: 'string';
       HostedUIDomain: 'string';
@@ -17,10 +17,6 @@ export type AmplifyDependentResourcesAttributes = {
       UserPoolArn: 'string';
       UserPoolId: 'string';
       UserPoolName: 'string';
-    };
-    userPoolGroups: {
-      AdminGroupRole: 'string';
-      BasicGroupRole: 'string';
     };
   };
   function: {

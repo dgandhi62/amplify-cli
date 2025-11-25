@@ -56,10 +56,19 @@ function App() {
       };
       console.log('Fetch result:', result);
       setNotes(result.data.listNotes.items);
-    } catch (error) {
+    } catch (error: any) {
       console.error('Error fetching notes:', error);
       console.error('Full error object:', JSON.stringify(error, null, 2));
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error';
+
+      let errorMessage = 'Unknown error';
+      if (error?.errors && error.errors.length > 0) {
+        errorMessage = error.errors[0].message;
+      } else if (error?.message) {
+        errorMessage = error.message;
+      } else if (typeof error === 'string') {
+        errorMessage = error;
+      }
+
       alert('Error fetching notes: ' + errorMessage);
     } finally {
       setLoading(false);
