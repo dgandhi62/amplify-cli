@@ -18,6 +18,10 @@ export type AmplifyDependentResourcesAttributes = {
       UserPoolId: 'string';
       UserPoolName: 'string';
     };
+    userPoolGroups: {
+      AdminGroupRole: 'string';
+      BasicGroupRole: 'string';
+    };
   };
   function: {
     thumbnailgen: {

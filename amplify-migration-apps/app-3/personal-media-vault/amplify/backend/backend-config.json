@@ -89,24 +89,6 @@
       "service": "Lambda"
     }
   },
-  "parameters": {
-    "AMPLIFY_function_thumbnailgen_deploymentBucketName": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "thumbnailgen"
-        }
-      ]
-    },
-    "AMPLIFY_function_thumbnailgen_s3Key": {
-      "usedBy": [
-        {
-          "category": "function",
-          "resourceName": "thumbnailgen"
-        }
-      ]
-    }
-  },
   "storage": {
     "s3mediavault": {
       "dependsOn": [],

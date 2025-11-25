@@ -46,7 +46,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-personalmediavault-dev-067b6-deployment/amplify-cfn-templates/auth/personalmediavault84489a6d-cloudformation-template.json",
         "logicalId": "authpersonalmediavault84489a6d"
       },
-      "lastPushTimeStamp": "2025-11-25T21:36:20.439Z",
+      "lastPushTimeStamp": "2025-11-25T21:44:48.581Z",
       "output": {
         "UserPoolId": "us-east-1_iIRpN15Qi",
         "AppClientIDWeb": "4d6s456o2blr6pt9duidg10a03",
@@ -75,7 +75,11 @@
           ]
         }
       ],
-      "lastPushTimeStamp": "2025-11-25T21:36:20.441Z"
+      "lastPushTimeStamp": "2025-11-25T21:44:48.504Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-personalmediavault-dev-067b6-deployment/amplify-cfn-templates/auth/userPoolGroups-cloudformation-template.json",
+        "logicalId": "authuserPoolGroups"
+      }
     }
   },
   "api": {
@@ -118,7 +122,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-personalmediavault-dev-067b6-deployment/amplify-cfn-templates/api/cloudformation-template.json",
         "logicalId": "apipersonalmediavault"
       },
-      "lastPushTimeStamp": "2025-11-25T20:45:55.237Z",
+      "lastPushTimeStamp": "2025-11-25T21:42:16.107Z",
       "lastPushDirHash": "VfXkShy8FJLLYv8nw3F2UUzQJnI="
     }
   },
@@ -127,7 +131,7 @@
       "service": "S3",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
-      "lastPushTimeStamp": "2025-11-25T20:45:56.692Z",
+      "lastPushTimeStamp": "2025-11-25T21:42:17.938Z",
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-personalmediavault-dev-067b6-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
         "logicalId": "storages3mediavault"
@@ -144,19 +148,19 @@
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda",
-      "lastBuildTimeStamp": "2025-11-25T20:29:00.012Z",
+      "lastBuildTimeStamp": "2025-11-25T21:44:43.169Z",
       "lastBuildType": "PROD",
-      "lastPackageTimeStamp": "2025-11-25T20:29:03.098Z",
-      "distZipFilename": "thumbnailgen-4d51722f52797445534e-build.zip",
+      "lastPackageTimeStamp": "2025-11-25T21:44:47.797Z",
+      "distZipFilename": "thumbnailgen-2b4e3854473533446838-build.zip",
       "s3Bucket": {
         "deploymentBucketName": "amplify-personalmediavault-dev-067b6-deployment",
-        "s3Key": "amplify-builds/thumbnailgen-4d51722f52797445534e-build.zip"
+        "s3Key": "amplify-builds/thumbnailgen-2b4e3854473533446838-build.zip"
       },
       "providerMetadata": {
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-personalmediavault-dev-067b6-deployment/amplify-cfn-templates/function/thumbnailgen-cloudformation-template.json",
         "logicalId": "functionthumbnailgen"
       },
-      "lastPushTimeStamp": "2025-11-25T20:45:55.243Z",
+      "lastPushTimeStamp": "2025-11-25T21:44:48.566Z",
       "output": {
         "LambdaExecutionRoleArn": "arn:aws:iam::615368094448:role/personalmediavaultLambdaRole4d4a5739-dev",
         "Region": "us-east-1",
