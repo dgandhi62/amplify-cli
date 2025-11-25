@@ -46,7 +46,7 @@
         "s3TemplateURL": "https://s3.amazonaws.com/amplify-personalmediavault-dev-067b6-deployment/amplify-cfn-templates/auth/personalmediavault84489a6d-cloudformation-template.json",
         "logicalId": "authpersonalmediavault84489a6d"
       },
-      "lastPushTimeStamp": "2025-11-25T20:45:55.235Z",
+      "lastPushTimeStamp": "2025-11-25T21:36:20.439Z",
       "output": {
         "UserPoolId": "us-east-1_iIRpN15Qi",
         "AppClientIDWeb": "4d6s456o2blr6pt9duidg10a03",
@@ -59,6 +59,23 @@
         "UserPoolName": "personalmediavault84489a6d_userpool_84489a6d"
       },
       "lastPushDirHash": "vx19gFmSVjcOLdJu3USXZg56q9k="
+    },
+    "userPoolGroups": {
+      "service": "Cognito-UserPool-Groups",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "personalmediavault84489a6d",
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ]
+        }
+      ],
+      "lastPushTimeStamp": "2025-11-25T21:36:20.441Z"
     }
   },
   "api": {
