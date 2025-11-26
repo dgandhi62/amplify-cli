@@ -11,12 +11,15 @@ node_modules
 dist
 dist-ssr
 *.local
+*.zip
+
+# ESLint
+.eslintignore
 
 # Yarn cache
-.yarn/cache
-.yarn/install-state.gz
-.yarn/unplugged
-.yarn/build-state.yml
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
 
 # Editor directories and files
 .vscode/*
